@@ -1,0 +1,12 @@
+version: '3'
+services:
+    pwn:
+        container_name: pwn_test
+        build:
+            context: .  # Antager att Dockerfile finns i samma mapp som docker-compose.yml
+        security_opt:
+            - seccomp:unconfined
+        cap_add:
+            - SYS_PTRACE
+        ports:
+            - "23946:23946"
