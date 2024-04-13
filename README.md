@@ -26,5 +26,5 @@ docker-compose up -d
 ```
 Login 
 ```
-docker exec -it pwn_test /bin/bash
+docker run -it pwn-docker_pwn
 ```
